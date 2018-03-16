@@ -1,8 +1,11 @@
 start_nm_wait=3s
-wls_domain=/home/oracle/Oracle/Middleware/Oracle_Home/user_projects/domains/oa
+wls_domain=[YOUR_DOMAIN_DIR]
 domain_name=$(basename ${wls_domain})
+#if all of your managed servers have same prifix, this script work proberly
+#based on oracle documentation, any resource in your doiman should be same profix based on type of it.
 wls_ms_prefix=ms_
 admin_server_name=AdminServer
+#if your domain behid a oracle http server (based on apache http server)
 ohs_instance=ohs_1
 
 format_ms(){
